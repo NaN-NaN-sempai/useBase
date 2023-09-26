@@ -1,4 +1,4 @@
-# [UseBase by Luís Henrique de Almeida](https://github.com/NaN-NaN-sempai)
+# [UseBase: Encode and Decode Numbers](https://github.com/NaN-NaN-sempai)
 
 ![Unpacked Size: 10.6 kB](https://img.shields.io/badge/Unpacked_Size-10.6_kB-00FF00?style=for-the-badge&color=5599FF)
 
