@@ -1,8 +1,9 @@
-# UseBase: Encode and Decode Numbers
+# [UseBase: Encode and Decode Numbers](https://github.com/NaN-NaN-sempai)
 
-[a](https://github.com/NaN-NaN-sempai)
 
+<div align="center">
 ![Unpacked Size: 10.6 kB](https://img.shields.io/badge/Unpacked_Size-10.6_kB-00FF00?style=for-the-badge&color=5599FF)
+</div>
 
 ## Table of Content
 - [Table of content](#table-of-content)
@@ -17,9 +18,9 @@
 
 ## Features
 - By default, encode Integers into the alphabet + alphabet in uppercase
-- Can use different bases
 - Suport to encode and decode
-- Suport encoding of strings and arrays
+- Can use different bases
+- Suport encoding and decoding of strings and arrays
 
 ## Support
 
@@ -31,10 +32,8 @@
 
 ## Installing
 Run the npm installation on terminal:
-```terminal
-
+```javascript
 npm install usebase
-
 ```
 
 Once the package is installed, you can import the library using import:
@@ -168,4 +167,4 @@ To make this `README` i used as reference [Axio's `README`](https://www.npmjs.co
 
 
 
-[Go back to top ↑](#usebase-by-luís-henrique-de-almeida)
+[Go back to top ↑](#usebase-encode-and-decode-numbers)
