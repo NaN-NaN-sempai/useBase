@@ -1,0 +1,33 @@
+{
+  "name": "usebase",
+  "version": "2.1.3",
+  "description": "Encode Integers into Strings and decode Strings into Integers.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "id",
+    "encode",
+    "decode",
+    "from base",
+    "to base",
+    "base 10",
+    "base ten",
+    "base 2",
+    "binary",
+    "base 8",
+    "octal",
+    "base 16",
+    "hexadecimal",
+    "from base 10 to binary",
+    "from base 10 to octal",
+    "from base 10 to hexadecimal",
+    "number to string",
+    "number to alphabet",
+    "number id to string"
+  ],
+  "author": "Luís Henrique de Almeida",
+  "license": "ISC"
+}
