@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![Unpacked Size: 10.6 kB](https://img.shields.io/badge/Unpacked_Size-10.6_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 11 kB](https://img.shields.io/badge/Unpacked_Size-11_kB-00FF00?style=for-the-badge&color=5599FF)
 
 </div>
 
