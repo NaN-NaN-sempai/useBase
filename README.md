@@ -33,12 +33,12 @@
 </div>
 
 ## Installing
-Install the package usign npm:
+Install the package using npm:
 ```css
 npm install usebase
 ```
 
-Once the package is installed, you can import useBase in your project:
+Once the package is installed, you can import useBase to your project:
 
 ```javascript
 import useBase from "usebase";
@@ -76,7 +76,9 @@ Using unpkg CDN:
 The inport `useBase` is a `function` that recieve a param `data` (optional), a string or array containing the basa that you want. Using it without the param, it will use the default base: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
 
 `useBase` returns a object with two functions `encode` and `decode`.
+
 `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded.
+
 `decode` recieve one param, `value` a encoded string or array. It returns a decode number.
 
 There is a simple example of usage:
