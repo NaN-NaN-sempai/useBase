@@ -14,7 +14,11 @@
 - [Installing](#installing)
   - [CDN](#cdn)
 - [Example](#example)
-  - [Base as Array and Special Characters](#base-as-array-and-special-characters)
+  - [Using the proto Properties](#using-the-proto-properties)
+  - [Custom Bases](#custom-bases)
+  - [Multiple Instances](#multiple-instances)
+  - [Base as Array](#base-as-array)
+  - [Special Characters](#special-characters)
 - [Errors](#errors)
 - [Credits](#credits)
 
@@ -49,15 +53,11 @@ useBase().encode(42); // returns "Q"
 If you are using `CommomJS`, there are some ways to import the module, one of them is using the import async function:
 
 ```javascript
-import("./index.js").then(({ default: useBase }) => {
-    console.log(useBase);
-
+import("usebase").then(({ default: useBase }) => {
     useBase().encode(42); // returns "Q"
 });
 
-// or
-
-// in your async function
+// or in your async function
 const { default: useBase } = await import("usebase");
 
 useBase().encode(42); // returns "Q"
@@ -81,13 +81,16 @@ Using unpkg CDN:
 
 ## Example
 
-`useBase` is a function that recieve a param `data` (optional), a string or array containing the wanted base, the default is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+`useBase` is a function that recieve a param `data` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
 
-`useBase` returns a object with two functions `encode` and `decode`.
+`useBase` returns a object with two functions `encode`, `decode` and `base` a non wiritable value containing the `base` used to create this instance.
 
-`encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded.
+ - `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded, the returned value have two proto values:
+   - `raw` property containing the `integer` param.
+   - `base` property containing the `base` used to create this instance.
 
-`decode` recieve one param, `value` a encoded string or array. It returns a decode number.
+ - `decode` recieve one param, `value` a encoded string or array. It returns a decode number, the returned value have a proto value:
+   - `base` property containing the `base` used to create this instance.
 
 There is a simple example of usage:
 
@@ -97,15 +100,60 @@ useBase().encode(42); // returns "Q"
 useBase().decode("Q") // returns 42
 ```
 
-You can use custom bases:
+
+### Using the proto Properties
+
+The `useBase` function have some proto properties containing some built-in bases: 
 
 ```javascript
-// using base2 (binary)
+useBase.base2; /* or */ useBase.binary;
+
+useBase.base5; /* or */ useBase.quinary;
+
+useBase.base8; /* or */ useBase.octal;
+
+useBase.base12; /* or */ useBase.duodecimal;
+
+useBase.base16; /* or */ useBase.hexadecimal;
+
+useBase.base32;
+
+useBase.base34;
+
+useBase.base62;
+
+useBase.base64;
+
+// usage example:
+useBase.binary.encode(42); // returns "101010"
+
+useBase.octal.decode("52"); // returns 42
+```
+
+using the `raw` proto property from the `enconde` returned value, you can easily translate the value from a base to another:
+
+```javascript
+let valueInBinary = useBase.binary.encode(42); // "101010"
+
+let valueInOctal = useBase.octal.encode(valueInBinary.raw); // 52
+```
+
+### Custom Bases
+
+Using custom bases:
+
+```javascript
+// using a custom base2 (binary)
 useBase("01").encode(42); // returns "101010" 
 
-// using base8 (octal)
+// using a custom base8 (octal)
 useBase("01234567").decode("52"); // returns 42
+
+// using a custom base
+useBase("MYBASE").encode(42); // returns "YYM"
 ```
+
+### Multiple Instances
 
 You can also save multiple instances and use them as you want:
 
@@ -123,7 +171,7 @@ const baseLetters = useBase("abcdefghijklmnopqrstuvwxyz"); // alphabet
 const baseLettersAndUpperCase = useBase(); // alphabet and UpperCase alphabet
 ```
 
-### Base as Array and Special Characters
+### Base as Array
 
 Using arrays:
 
@@ -135,6 +183,8 @@ let myEncode = base42.encode(42); // returns array (2) ['the', 'to']
 
 let myDecode = base42.decode(myEncode); // returns 42
 ```
+
+### Special Characters
 
 Some special character use more than one space per character inside a string so you can't use it as string nor split to use as an array.
 We need to split it using another method and pass this new array to useBase
