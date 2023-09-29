@@ -1,6 +1,6 @@
 {
   "name": "usebase",
-  "version": "2.1.8",
+  "version": "3.0.3",
   "description": "Encode Integers into Strings and decode Strings into Integers.",
   "main": "index.js",
   "type": "module",

@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![Unpacked Size: 11 kB](https://img.shields.io/badge/Unpacked_Size-11_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 15.6 kB](https://img.shields.io/badge/Unpacked_Size-15.6_kB-00FF00?style=for-the-badge&color=5599FF)
 
 </div>
 
@@ -14,7 +14,7 @@
 - [Installing](#installing)
   - [CDN](#cdn)
 - [Example](#example)
-  - [Using the proto Properties](#using-the-proto-properties)
+  - [Using the Proto Properties](#using-the-proto-properties)
   - [Custom Bases](#custom-bases)
   - [Multiple Instances](#multiple-instances)
   - [Base as Array](#base-as-array)
@@ -97,11 +97,11 @@ There is a simple example of usage:
 ```javascript
 useBase().encode(42); // returns "Q"
 
-useBase().decode("Q") // returns 42
+useBase().decode("Q"); // returns 42
 ```
 
 
-### Using the proto Properties
+### Using the Proto Properties
 
 The `useBase` function have some proto properties containing some built-in bases: 
 
@@ -221,6 +221,7 @@ List of possible errors and cautions you need to take:
 - ![Warn](https://img.shields.io/badge/warn-00FF00?style=for-the-badge&color=ffff00) - If decode `value` param is given as a string or array wich characters or values are not included in the `base`: The return number will be a mess and incorrect.
 - ![Warn](https://img.shields.io/badge/warn-00FF00?style=for-the-badge&color=ffff00) - If decode `value` param is given as a string somehow is too complex or too long: The return number will be `Infinity`.
 - ![Warn](https://img.shields.io/badge/warn-00FF00?style=for-the-badge&color=ffff00) - If encode `auxArray` param is given a value: If you don't understand what you are doing, it will probably not work as expected.
+- ![Warn](https://img.shields.io/badge/warn-00FF00?style=for-the-badge&color=ffff00) - If any value is assigned to any of the proto properties: The proto properties are read-only.
 
 ## Credits
 
