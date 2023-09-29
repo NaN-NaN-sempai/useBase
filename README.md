@@ -14,15 +14,15 @@
 - [Installing](#installing)
   - [CDN](#cdn)
 - [Example](#example)
-  - [Base Array and Special Characters](#base-array-and-special-characters)
+  - [Base as Array and Special Characters](#base-as-array-and-special-characters)
 - [Errors](#errors)
 - [Credits](#credits)
 
 ## Features
-- By default, encode Integers into the alphabet + alphabet in uppercase
-- Suport to encode and decode
-- Can use different bases
-- Suport encoding and decoding of strings and arrays
+- Encode Integers using a base.
+- Suport to encode and decode.
+- Can use different bases.
+- Suport encoding and decoding of strings and arrays.
 
 ## Support
 
@@ -49,6 +49,14 @@ useBase().encode(42); // returns "Q"
 If you are using `CommomJS`, there are some ways to import the module, one of them is using the import async function:
 
 ```javascript
+import("./index.js").then(({ default: useBase }) => {
+    console.log(useBase);
+
+    useBase().encode(42); // returns "Q"
+});
+
+// or
+
 // in your async function
 const { default: useBase } = await import("usebase");
 
@@ -73,7 +81,7 @@ Using unpkg CDN:
 
 ## Example
 
-The inport `useBase` is a `function` that recieve a param `data` (optional), a string or array containing the basa that you want. Using it without the param, it will use the default base: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+`useBase` is a function that recieve a param `data` (optional), a string or array containing the wanted base, the default is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
 
 `useBase` returns a object with two functions `encode` and `decode`.
 
@@ -115,7 +123,7 @@ const baseLetters = useBase("abcdefghijklmnopqrstuvwxyz"); // alphabet
 const baseLettersAndUpperCase = useBase(); // alphabet and UpperCase alphabet
 ```
 
-### Base Array and Special Characters
+### Base as Array and Special Characters
 
 Using arrays:
 
