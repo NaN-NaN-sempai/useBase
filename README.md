@@ -10,7 +10,7 @@
 <br>
 
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
-![Unpacked Size: 17.1 kB](https://img.shields.io/badge/Unpacked_Size-17.1_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 17 kB](https://img.shields.io/badge/Unpacked_Size-17_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/useBase)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
