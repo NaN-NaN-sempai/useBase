@@ -2,6 +2,12 @@
 
 <div align="center">
 
+[![UseBase Logo]()](https://github.com/NaN-NaN-sempai/useBase)
+
+</div>
+
+<div align="center">
+
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
 ![Unpacked Size: 16.9 kB](https://img.shields.io/badge/Unpacked_Size-16.9_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
