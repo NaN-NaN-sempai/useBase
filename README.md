@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![UseBase Logo]()](https://github.com/NaN-NaN-sempai/useBase)
+[![UseBase Logo](https://raw.githubusercontent.com/NaN-NaN-sempai/useBase/main/logo.png)](https://github.com/NaN-NaN-sempai/useBase)
 
 </div>
 
