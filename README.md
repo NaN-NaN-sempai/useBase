@@ -1,16 +1,21 @@
 # [UseBase: Encode and Decode Numbers](https://github.com/NaN-NaN-sempai/useBase)
 
-
 <div align="center">
 
-![Unpacked Size: 15.6 kB](https://img.shields.io/badge/Unpacked_Size-15.6_kB-00FF00?style=for-the-badge&color=5599FF)
+[![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
+![Unpacked Size: 16.4 kB](https://img.shields.io/badge/Unpacked_Size-16.4_kB-00FF00?style=for-the-badge&color=5599FF)
+<br>
+[![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai)
+[![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
 
 </div>
 
 ## Table of Content
+- [UseBase: Encode and Decode Numbers](#usebase-encode-and-decode-numbers)
 - [Table of content](#table-of-content)
 - [Features](#features)
 - [Support](#support)
+- [About](#about)
 - [Installing](#installing)
   - [CDN](#cdn)
 - [Example](#example)
@@ -26,15 +31,28 @@
 - Encode Integers using a base.
 - Suport to encode and decode.
 - Can use different bases.
-- Suport encoding and decoding of strings and arrays.
+- Suport to strings or arrays bases.
 
 ## Support
-
 <div align="center">
-    
+
 [![ES6 Module](https://img.shields.io/badge/ES6-Module-F7DF1E?style=for-the-badge&logo=javascript&logoColor=F7DF1E&color=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
+![Node.js](https://img.shields.io/badge/node.js-FFFF00?style=for-the-badge&logoColor=white&logo=node.js&color=339933)
 
 </div>
+
+## About
+`useBase` is a function that recieve a param `data` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+
+`useBase` returns a object with two functions `encode`, `decode` and `base` a non wiritable value containing the `base` used to create this instance.
+
+ - `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded, the returned value have two proto values:
+   - `raw` property containing the `integer` param.
+   - `base` property containing the `base` used to create this instance.
+
+ - `decode` recieve one param, `value` a encoded string or array. It returns a decode number, the returned value have a proto value:
+   - `base` property containing the `base` used to create this instance.
+
 
 ## Installing
 Install the package using npm:
@@ -78,20 +96,7 @@ Using unpkg CDN:
 
 ```
 
-
 ## Example
-
-`useBase` is a function that recieve a param `data` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
-
-`useBase` returns a object with two functions `encode`, `decode` and `base` a non wiritable value containing the `base` used to create this instance.
-
- - `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded, the returned value have two proto values:
-   - `raw` property containing the `integer` param.
-   - `base` property containing the `base` used to create this instance.
-
- - `decode` recieve one param, `value` a encoded string or array. It returns a decode number, the returned value have a proto value:
-   - `base` property containing the `base` used to create this instance.
-
 There is a simple example of usage:
 
 ```javascript
@@ -100,9 +105,7 @@ useBase().encode(42); // returns "Q"
 useBase().decode("Q"); // returns 42
 ```
 
-
 ### Using the Proto Properties
-
 The `useBase` function have some proto properties containing some built-in bases: 
 
 ```javascript
@@ -130,16 +133,15 @@ useBase.binary.encode(42); // returns "101010"
 useBase.octal.decode("52"); // returns 42
 ```
 
-using the `raw` proto property from the `enconde` returned value, you can easily translate the value from a base to another:
+Using the `raw` proto property from the `enconde` returned value, you can easily translate the value from a base to another:
 
 ```javascript
 let valueInBinary = useBase.binary.encode(42); // "101010"
 
-let valueInOctal = useBase.octal.encode(valueInBinary.raw); // 52
+let valueInOctal = useBase.octal.encode(valueInBinary.raw); // "52"
 ```
 
 ### Custom Bases
-
 Using custom bases:
 
 ```javascript
@@ -154,10 +156,13 @@ useBase("MYBASE").encode(42); // returns "YYM"
 ```
 
 ### Multiple Instances
-
 You can also save multiple instances and use them as you want:
 
 ```javascript
+import { base2, base8, base12, base16, base32, base34, base62, base64 } from "usebase";
+
+// or with custom bases
+
 const base2 = useBase("01"); // binary
 
 const base8 = useBase("01234567"); // octal
@@ -172,7 +177,6 @@ const baseLettersAndUpperCase = useBase(); // alphabet and UpperCase alphabet
 ```
 
 ### Base as Array
-
 Using arrays:
 
 ```javascript
@@ -185,7 +189,6 @@ let myDecode = base42.decode(myEncode); // returns 42
 ```
 
 ### Special Characters
-
 Some special character use more than one space per character inside a string so you can't use it as string nor split to use as an array.
 We need to split it using another method and pass this new array to useBase
 
@@ -205,8 +208,6 @@ base16AsEmoji.encode(42); // returns array (2) ['😂', '😋']
 ```
 
 ## Errors
-
-
 List of error throws:
 - ![Thrown Error](https://img.shields.io/badge/Thrown-Error-00FF00?style=for-the-badge&color=FF0000) - If useBase `base` param is given but its not a string or array: "Param 'base' must be of type String or Array".
 - ![Thrown Error](https://img.shields.io/badge/Thrown-Error-00FF00?style=for-the-badge&color=FF0000) - If encode `integer` param is not given as a number: "Param 'number' must be of type Int".
@@ -224,7 +225,6 @@ List of possible errors and cautions you need to take:
 - ![Warn](https://img.shields.io/badge/warn-00FF00?style=for-the-badge&color=ffff00) - If any value is assigned to any of the proto properties: The proto properties are read-only.
 
 ## Credits
-
 Thanks to [this stack overflow question](https://stackoverflow.com/questions/1337419/how-do-you-convert-numbers-between-different-bases-in-javascript/77164426#77164426) i got the inspiration to create useBase.
 
 I got the `splitPlus` function from [rootEnginear in this stack overflow answer](https://stackoverflow.com/a/71619350/8639520).
