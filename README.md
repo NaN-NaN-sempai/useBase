@@ -3,9 +3,9 @@
 <div align="center">
 
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
-![Unpacked Size: 16.4 kB](https://img.shields.io/badge/Unpacked_Size-16.4_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 16.5 kB](https://img.shields.io/badge/Unpacked_Size-16.5_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
-[![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai)
+[![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/useBase)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
 
 </div>
@@ -42,16 +42,16 @@
 </div>
 
 ## About
-`useBase` is a function that recieve a param `data` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+`useBase` is a function that recieve a param `base` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
 
-`useBase` returns a object with two functions `encode`, `decode` and `base` a non wiritable value containing the `base` used to create this instance.
+`useBase` returns a object with two functions `encode` and `decode`, and a read-only value `base`, containing the `base` used to create this instance.
 
- - `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded, the returned value have two proto values:
-   - `raw` property containing the `integer` param.
-   - `base` property containing the `base` used to create this instance.
+ - `encode` recieve two params, `integer` the number to be encoded and `auxArray` (optional) the array that the function uses as auxiliary array to store the values when the `base` is a array (don't pass any value if you dont know what you are doing). It returns a string or array of the `integer` encoded, the returned value have two proto properties:
+   - `raw` property containing the `integer` param used to encode this value.
+   - `base` property containing the `base` used to create this `useBase` instance.
 
  - `decode` recieve one param, `value` a encoded string or array. It returns a decode number, the returned value have a proto value:
-   - `base` property containing the `base` used to create this instance.
+   - `base` property containing the `base` used to create this `useBase` instance.
 
 
 ## Installing
@@ -159,7 +159,8 @@ useBase("MYBASE").encode(42); // returns "YYM"
 You can also save multiple instances and use them as you want:
 
 ```javascript
-import { base2, base8, base12, base16, base32, base34, base62, base64 } from "usebase";
+import useBase from "usebase";
+const { base2, base8, base12, base16, base32, base34, base62, base64 } = useBase;
 
 // or with custom bases
 
