@@ -3,7 +3,7 @@
 <div align="center">
 
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
-![Unpacked Size: 16.5 kB](https://img.shields.io/badge/Unpacked_Size-16.5_kB-00FF00?style=for-the-badge&color=5599FF)
+![Unpacked Size: 16.9 kB](https://img.shields.io/badge/Unpacked_Size-16.9_kB-00FF00?style=for-the-badge&color=5599FF)
 <br>
 [![Github](https://img.shields.io/badge/github-00FF00?style=for-the-badge&logo=github&color=181717)](https://github.com/NaN-NaN-sempai/useBase)
 [![Talk with me](https://img.shields.io/badge/talk_with_me-FFFF00?style=for-the-badge&logoColor=white&logo=whatsapp&color=25D366)](https://wa.me/5574981395580?text=I%20came%20from%20npm!)
@@ -30,8 +30,8 @@
 ## Features
 - Encode Integers using a base.
 - Suport to encode and decode.
-- Can use different bases.
-- Suport to strings or arrays bases.
+- Flexible support for both strings and arrays as bases.
+- Support for various bases, including binary, octal, hexadecimal, and custom character sets.
 
 ## Support
 <div align="center">
@@ -42,7 +42,9 @@
 </div>
 
 ## About
-`useBase` is a function that recieve a param `base` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
+[UseBase](https://github.com/NaN-NaN-sempai/useBase) is a versatile JavaScript library designed to simplify the process of encoding and decoding numbers using various numeral bases. Whether you need to represent integers in binary, hexadecimal, custom character sets, or even emojis.
+
+About it's usage, `useBase` is a function that recieve a param `base` (optional), a string or array containing the base to be used, the default value is: `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`.
 
 `useBase` returns a object with two functions `encode` and `decode`, and a read-only value `base`, containing the `base` used to create this instance.
 
