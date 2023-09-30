@@ -1,12 +1,13 @@
-# [UseBase: Encode and Decode Numbers](https://github.com/NaN-NaN-sempai/useBase)
-
 <div align="center">
+  
+# [UseBase:<br>Encode and Decode Numbers](https://github.com/NaN-NaN-sempai/useBase)
 
-[![UseBase Logo](https://raw.githubusercontent.com/NaN-NaN-sempai/useBase/main/logo.png)](https://github.com/NaN-NaN-sempai/useBase)
+<a href="https://github.com/NaN-NaN-sempai/useBase">
+  <img title="UseBase Logo" alt="UseBase Logo" width="300px" src="https://raw.githubusercontent.com/NaN-NaN-sempai/useBase/main/logo.png" />
+</a>
 
-</div>
-
-<div align="center">
+<br>
+<br>
 
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
 ![Unpacked Size: 16.9 kB](https://img.shields.io/badge/Unpacked_Size-16.9_kB-00FF00?style=for-the-badge&color=5599FF)
@@ -17,7 +18,7 @@
 </div>
 
 ## Table of Content
-- [UseBase: Encode and Decode Numbers](#usebase-encode-and-decode-numbers)
+- [UseBase: Encode and Decode Numbers](#usebaseencode-and-decode-numbers)
 - [Table of content](#table-of-content)
 - [Features](#features)
 - [Support](#support)
@@ -244,4 +245,4 @@ To make this `README` i used as reference [Axio's `README`](https://www.npmjs.co
 
 
 
-[Go back to top ↑](#usebase-encode-and-decode-numbers)
+[Go back to top ↑](#usebaseencode-and-decode-numbers)
