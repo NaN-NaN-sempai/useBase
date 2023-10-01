@@ -1,9 +1,10 @@
 <div align="center">
-  
-# [UseBase:<br>Encode and Decode Numbers](https://github.com/NaN-NaN-sempai/useBase)
+
 
 <a href="https://github.com/NaN-NaN-sempai/useBase">
   <img title="UseBase Logo" alt="UseBase Logo" width="300px" src="https://raw.githubusercontent.com/NaN-NaN-sempai/useBase/main/logo.png" />
+  
+  # UseBase:<br>Encode and Decode Numbers
 </a>
 
 <br>
