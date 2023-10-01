@@ -7,8 +7,6 @@
   # UseBase:<br>Encode and Decode Numbers
 </a>
 
-<br>
-<br>
 
 [![npm v9.6.7](https://img.shields.io/badge/npm-v9.6.7-00FF00?style=for-the-badge&logo=npm&color=CB3837)](https://www.npmjs.com/package/usebase)
 ![Unpacked Size: 17 kB](https://img.shields.io/badge/Unpacked_Size-17_kB-00FF00?style=for-the-badge&color=5599FF)
